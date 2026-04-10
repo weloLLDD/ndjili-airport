@@ -48,7 +48,7 @@ const Footer = () => {
                 alignItems: "center",
               }}
             >
-              <img src="/rva1.png" alt="RVA" width="100" />
+               
               <img src="/ethiopians.png" alt="Air France" width="80" />
               <img src="/airfrance.png" alt="Air France" width="80" />  
                <img src="/AIRCONGO.png" alt="Kenya Airways" width="80" />
