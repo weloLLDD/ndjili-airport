@@ -47,9 +47,7 @@ const Header = () => {
             </LinkContainer>
 
             {/* BOUTON PRO */}
-            <Button variant="light" className="ms-3 fw-bold">
-              Réserver
-            </Button>
+            
 
           </Nav>
         </Navbar.Collapse>
