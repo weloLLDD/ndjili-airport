@@ -1,81 +1,57 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar
-      bg="primary"
-      variant="dark"
-      expand="lg"
-      sticky="top"
-      style={{
-        padding: "12px 0",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-      }}
-    >
+    <Navbar expand="lg" sticky="top" className="navbar-dark bg-primary shadow-sm">
       <Container>
 
-        {/* LOGO (DEPUIS PUBLIC FOLDER) */}
-        <Navbar.Brand
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
+        {/* LOGO + TITRE */}
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <img
-            src="/rva1.png"   // ✅ image depuis public/
-            alt="RVA Logo"
-            width="100"
-            height="100"
-            style={{
-              objectFit: "contain",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              padding: "3px",
-            }}
+            src="/rva1.png"
+            alt="RVA"
+            width="55"
+            height="55"
+            className="me-2 rounded-circle bg-white p-1"
           />
 
-          <span style={{ fontWeight: "bold", fontSize: "18px" }}>
-            Aéroport RVA 
-          </span>
-        
+          <div>
+            <div className="fw-bold text-white">RVA</div>
+            <small className="text-light">
+              Aéroport International de Ndjili
+            </small>
+          </div>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle />
 
-        <Navbar.Collapse id="basic-navbar-nav">
-
-          <Nav className="ms-auto" style={{ gap: "15px" }}>
+        <Navbar.Collapse>
+          <Nav className="ms-auto align-items-center">
 
             <LinkContainer to="/">
-              <Nav.Link style={{ padding: "8px 12px" }}>
-                Accueil
-              </Nav.Link>
+              <Nav.Link>Accueil</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/flights">
-              <Nav.Link style={{ padding: "8px 12px" }}>
-                Vols
-              </Nav.Link>
+              <Nav.Link>Vols</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/about">
-              <Nav.Link style={{ padding: "8px 12px" }}>
-                Infos
-              </Nav.Link>
+              <Nav.Link>Infos</Nav.Link>
             </LinkContainer>
 
             <LinkContainer to="/contact">
-              <Nav.Link style={{ padding: "8px 12px" }}>
-                Contact
-              </Nav.Link>
+              <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
 
-          </Nav>
+            {/* BOUTON PRO */}
+            <Button variant="light" className="ms-3 fw-bold">
+              Réserver
+            </Button>
 
+          </Nav>
         </Navbar.Collapse>
 
       </Container>
